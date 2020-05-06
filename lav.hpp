@@ -2,14 +2,16 @@
 #define LAV_HPP_INCLUDED
 #include "zivotinje.hpp"
 
-enum Pokret {rici, obruc, sedi, lopta};
+enum PokretL {rici, obrucl, sedi, loptal};
 
-class Lav : public Zivotinje{
+class Lav : public Zivotinje
+{
 private:
-    Pokret potez;
+    PokretL potez;
     string ime;
 public:
-    Lav (Zivotinja v, Kontinenti p, bool k, Pokret po, string i) : Zivotinje(v,p,k),potez(po),ime(i);
+    Lav():Zivotinje(lav, Afrika, 1),potez(rici),ime("ime") {}
+    Lav (Zivotinja v, Kontinenti p, bool k, PokretL po, string i) : Zivotinje(v,p,k),potez(po),ime(i) {}
 };
 
 

@@ -3,15 +3,16 @@
 #include "zaposleni.hpp"
 #include "zivotinje.hpp"
 
-enum Stvari {obruc, lopte, stap, muzika};
+enum Stvari {obruc, lopta, stap, muzika};
 
-class Animator : public Zaposleni{
+class Animator : public Zaposleni
+{
 private:
     Stvari rekviziti;
     Zivotinje zivotinja;
 public:
-    Animator() : Zaposleni(0, "ime", "prezime") zivotinja(pingvin, antartik, 1), rekviziti(lopta){}
-    Animator(string i, string p, Stvari rek, Zivotinja v, Kontinenti p, bool k) : Zaposleni(i, p), rekviziti(rek), zivotinja(v,p,k){}
+    Animator() : Zaposleni("ime", "prezime"), zivotinja(pingvin, Antartik, 1), rekviziti(lopta) {}
+    Animator(string i, string p, Stvari rek, Zivotinja v, Kontinenti po, bool k) : Zaposleni(i, p), rekviziti(rek), zivotinja(v,po,k) {}
 
 };
 

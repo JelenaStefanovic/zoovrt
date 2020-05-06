@@ -2,14 +2,16 @@
 #define PINGVIN_HPP_INCLUDED
 #include "zivotinje.hpp"
 
-enum Pokret {NaStomaku, loptanje, plivanje, oglasavanje, hvatanjeRibe};
+enum PokretP {NaStomaku, loptanje, plivanje, Oglasavanje, hvatanjeRibe};
 
-class Pingvin : public Zivotinje{
+class Pingvin : public Zivotinje
+{
 private:
-    Pokret potez;
+    PokretP potez;
     string ime;
 public:
-    Pingvin (Zivotinja v, Kontinenti p, bool k, Pokret po, string i) : Zivotinje(v,p,k),potez(po),ime(i);
+    Pingvin():Zivotinje(pingvin, Antartik, 1),potez(NaStomaku),ime("ime") {}
+    Pingvin (Zivotinja v, Kontinenti p, bool k, PokretP po, string i) : Zivotinje(v,p,k),potez(po),ime(i) {}
 };
 
 #endif // PINGVIN_HPP_INCLUDED

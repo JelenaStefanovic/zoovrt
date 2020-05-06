@@ -1,11 +1,14 @@
 #ifndef AZIJA_HPP_INCLUDED
 #define AZIJA_HPP_INCLUDED
+#include <iostream>
 
-enum fauna {slon, panda, nosorog, tigar};
+using namespace std;
+enum faunaAz {Slon, panda, nosorog, tigar};
 
-class Azija{
+class Azija
+{
 private:
-    fauna zivotinja;
+    faunaAz zivotinja;
     string opisKontinenta;
 public:
 

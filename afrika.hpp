@@ -1,11 +1,14 @@
 #ifndef AFRIKA_HPP_INCLUDED
 #define AFRIKA_HPP_INCLUDED
+#include <iostream>
 
-enum fauna {antilopa, lav, hijena, bizon};
+using namespace std;
+enum faunaAf {antilopa, llav, hijena, bizon};
 
-class Afrika{
+class Afrika
+{
 private:
-    fauna zivotinja;
+    faunaAf zivotinja;
     string opisKontinenta;
 public:
 

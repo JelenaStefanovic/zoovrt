@@ -5,22 +5,21 @@
 #include "lav.hpp"
 #include "kengur.hpp"
 #include "animator.hpp"
-#include "karte.hpp"
 
 enum Satnica {osam_am, deset_am, podne, pet_pm, osam_pm};
 
-class Predstave{
+class Predstave
+{
 private:
     Satnica vreme;
     Animator anim;
-    Delfin delf;
     Pingvin pingv;
+    Delfin delf;
     Lav laav;
     Kengur kenguur;
 public:
-    Predstave() : anim("ime", "prezime", lopta, pingvin), delf(delfin, okean, 0, izranjanje, "ime"), pingv(pingvin, Antartik, 1, plivanje, "ime"), laav(lav, Afrika, 1, sedi, "ime"), kenguur(kengur, Australija, 1, boks, "ime"){}
-    Predstave(Satnica v, string i, string p, Stvari rek, Zivotinja vA, Kontinenti pA, bool kA, Zivotinja vD, Kontinenti pD, bool kD, Pokret poD, string iD, Zivotinja vP, Kontinenti pP, bool kP, Pokret poP, string iP, Zivotinja vL, Kontinenti pL, bool kL, Pokret poL, string iL, Zivotinja vK, Kontinenti pK, bool kK, Pokret poK, string iK) : anim(i,p,rek,vA,pA,kA), delf(vD,pD,kD,poD,iD), pingv(vP,pP,kP,poP,iP), laav(vL,pL,kL,poL,iL), kenguur(vK,pK,kK,poK,iK){}
-
+    Predstave():anim("ime","prezime",obruc, pingvin, Antartik, 1),delf(delfin, okean, 0, izranjanje, "Dragan"), pingv(pingvin, Antartik,1,NaStomaku,"Kovalski"),laav(lav,Afrika, 1, rici, "Stefan"), kenguur(kengur, Australija,1,skoci,"Dusan"), vreme(osam_am) {}
+    Predstave(string i, string p, Stvari rek, Zivotinja v, Kontinenti po, bool k,  Zivotinja vD, Kontinenti pD, bool kD, PokretD poD, string iD,  Zivotinja vP, Kontinenti pP, bool kP, PokretP poP, string iP,  Zivotinja vL, Kontinenti pL, bool kL, PokretL poL, string iL,  Zivotinja vK, Kontinenti pK, bool kK, PokretK poK, string iK, Satnica vreme):anim(i,p,rek,v,po,k),delf(vD,pD,kD,poD,iD),pingv(vP,pP,kP,poP,iP),laav(vL,pL,kP,poL,iL),kenguur(vK,pK,kK,poK,iK) {}
 };
 
 

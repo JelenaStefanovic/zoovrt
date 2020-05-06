@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Spisak.txt" />
 		<Unit filename="afrika.hpp" />
 		<Unit filename="animator.hpp" />
 		<Unit filename="antartik.hpp" />

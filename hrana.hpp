@@ -4,7 +4,8 @@
 enum Restoran {mala, srednja, velika};
 enum Predstava {hot_dog, pica, burger, pomfrit, sladoled, cips, kokice, semenke};
 
-class Hrana{
+class Hrana
+{
 private:
     int cena;
     Restoran porcija;

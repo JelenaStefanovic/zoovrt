@@ -1,11 +1,14 @@
 #ifndef ANTARTIK_HPP_INCLUDED
 #define ANTARTIK_HPP_INCLUDED
+#include <iostream>
 
-enum fauna {foka, polarni_medved, polarna_lisica, pingvin};
+using namespace std;
+enum faunaAn {foka, polarni_medved, polarna_lisica, ppingvin};
 
-class Antartik{
+class Antartik
+{
 private:
-    fauna zivotinja;
+    faunaAn zivotinja;
     string opisKontinenta;
 public:
 

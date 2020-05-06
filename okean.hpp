@@ -1,11 +1,14 @@
 #ifndef OKEAN_HPP_INCLUDED
 #define OKEAN_HPP_INCLUDED
+#include <iostream>
 
-enum fauna {kit, ajkula, delfini, tropske_ribe};
+using namespace std;
+enum faunaO {Kit, ajkula, Delfini, tropske_ribe};
 
-class Okean {
+class Okean
+{
 private:
-    fauna zivotinja;
+    faunaO zivotinja;
     string opisProstora;
 public:
 

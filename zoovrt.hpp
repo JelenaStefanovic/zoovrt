@@ -3,7 +3,8 @@
 #include "zaposleni.hpp"
 #include "karte.hpp"
 
-class Zoovrt {
+class Zoovrt
+{
 private:
     string naziv;
     Zaposleni radnici[100];
