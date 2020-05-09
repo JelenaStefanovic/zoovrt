@@ -11,6 +11,18 @@ private:
     Restoran porcija;
     Predstava jelo;
 public:
+    int getcena()const
+    {
+        return cena;
+    }
+    Restoran getre()const
+    {
+        return porcija;
+    }
+    Predstava getpr()const
+    {
+        return jelo;
+    }
     Hrana()
     {
         cena=0;
@@ -23,6 +35,7 @@ public:
         porcija=p;
         jelo=j;
     }
+    friend ostream& operator << (ostream& izlaz, const Hrana& h);
 
 };
 

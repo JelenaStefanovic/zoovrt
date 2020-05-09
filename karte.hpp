@@ -9,7 +9,39 @@ class Karte
 private:
     int cena;
     Ulaznica karta;
+    static int brojKarata;
 public:
+    Karte()
+    {
+        cena=2000;
+        karta=jednodnevna;
+        brojKarata++;
+    }
+    Karte (int c, Ulaznica k)
+    {
+        c=cena;
+        k=karta;
+        brojKarata++;
+    }
+    static int getBroj()
+    {
+        return brojKarata;
+    }
+    int getBr()
+    {
+        return brojKarata;
+    }
+    /*int getCena()const
+    {
+        return cena;
+    }
+    Ulaznica getk()const
+    {
+        return karta;
+    }
+
+    friend ostream& operator << (ostream& izlaz, const Karte& k);*/
+
     void Prodaja()
     {
         int odgovor1;

@@ -8,7 +8,7 @@
 1588368556 source:c:\users\asus\desktop\projekat\main.cpp
 	<iostream>
 
-1588804110 source:d:\jelena\programiranje\projekat\zoovrt\main.cpp
+1589059241 source:d:\jelena\programiranje\projekat\zoovrt\main.cpp
 	<iostream>
 	"afrika.hpp"
 	"animator.hpp"
@@ -31,13 +31,13 @@
 1588804415 d:\jelena\programiranje\projekat\zoovrt\afrika.hpp
 	<iostream>
 
-1588803791 d:\jelena\programiranje\projekat\zoovrt\animator.hpp
+1589052241 d:\jelena\programiranje\projekat\zoovrt\animator.hpp
 	"zaposleni.hpp"
 	"zivotinje.hpp"
 
 1588803791 d:\jelena\programiranje\projekat\zoovrt\zaposleni.hpp
 
-1588804181 d:\jelena\programiranje\projekat\zoovrt\zivotinje.hpp
+1589052241 d:\jelena\programiranje\projekat\zoovrt\zivotinje.hpp
 	<iostream>
 	<fstream>
 
@@ -53,9 +53,9 @@
 1588804316 d:\jelena\programiranje\projekat\zoovrt\delfin.hpp
 	"zivotinje.hpp"
 
-1588803791 d:\jelena\programiranje\projekat\zoovrt\hrana.hpp
+1589054880 d:\jelena\programiranje\projekat\zoovrt\hrana.hpp
 
-1588803791 d:\jelena\programiranje\projekat\zoovrt\karte.hpp
+1589059241 d:\jelena\programiranje\projekat\zoovrt\karte.hpp
 	"animator.hpp"
 
 1588803791 d:\jelena\programiranje\projekat\zoovrt\kengur.hpp
@@ -77,7 +77,7 @@
 	"kengur.hpp"
 	"animator.hpp"
 
-1588803791 d:\jelena\programiranje\projekat\zoovrt\suvenirnica.hpp
+1589056087 d:\jelena\programiranje\projekat\zoovrt\suvenirnica.hpp
 
 1588803791 d:\jelena\programiranje\projekat\zoovrt\zoovrt.hpp
 	"zaposleni.hpp"

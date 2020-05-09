@@ -29,13 +29,24 @@ protected:
     Kontinenti poreklo;
     bool kopnena;
 public:
+    Zivotinja getzi()const
+    {
+        return vrsta;
+    }
+    Kontinenti getk()const
+    {
+        return poreklo;
+    }
+    bool getb()const
+    {
+        return kopnena;
+    }
     Zivotinje()
     {
         vrsta=pingvin;
         poreklo=Antartik;
         kopnena=1;
     }
-
     Zivotinje(Zivotinja v, Kontinenti p, bool k)
     {
         vrsta=v;
@@ -48,6 +59,7 @@ public:
         citajTxt(nazivFajla);
         cout<<endl<<endl;
     }
+    friend ostream& operator <<(ostream& izlaz, const Zivotinje& z);
 };
 
 #endif // ZIVOTINJE_HPP_INCLUDED
