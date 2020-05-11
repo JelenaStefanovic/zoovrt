@@ -23,6 +23,7 @@ int Karte::brojKarata=0;
 
 ostream& operator <<(ostream& izlaz, const Zivotinje& z)
 {
+
     if (z.getb()==1)
     {
        izlaz << "Kopnena"<< endl;
@@ -86,6 +87,7 @@ ostream& operator <<(ostream& izlaz, const Zivotinje& z)
     {
         izlaz << "Zivotinja: kengur" << endl;
     }
+    return izlaz;
 }
 ostream& operator << (ostream& izlaz, const Animator& a)
 {
@@ -100,6 +102,7 @@ ostream& operator << (ostream& izlaz, const Animator& a)
         izlaz << "Rekvizit: muzika" << endl;
 
     izlaz << "Vrsta: " << a.getz() << endl;
+    return izlaz;
 }
 
 ostream& operator << (ostream& izlaz, const Hrana& h)
@@ -152,10 +155,12 @@ ostream& operator << (ostream& izlaz, const Hrana& h)
     {
         izlaz << "Jelo: semenke" << endl;
     }
+    return izlaz;
 }
 
 ostream& operator << (ostream& izlaz, const Suvenirnica& s)
 {
+    cout << "Ispis suvenira: " << endl;
     if(s.getsu()==0)
     {
         izlaz << "Suvenir: skulptura" << endl;
@@ -178,13 +183,14 @@ ostream& operator << (ostream& izlaz, const Suvenirnica& s)
     }
 
     izlaz << "Cena: " << s.getCenaSuvenira() << endl;
+    return izlaz;
 }
 
 
 
 int main()
 {
-    /*
+    /*~
     Moja ideje za funkcionalnost projekta su sledece:
     1. Prodaja karata odnosno ulaznica:
     Korisnik izabere da li zeli poludnevnu celodnevnu ili kartu za predstavu,

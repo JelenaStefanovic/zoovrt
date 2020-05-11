@@ -59,7 +59,7 @@ public:
         citajTxt(nazivFajla);
         cout<<endl<<endl;
     }
-    friend ostream& operator <<(ostream& izlaz, const Zivotinje& z);
+    friend ostream& operator << (ostream& izlaz, const Zivotinje& z);
 };
 
 #endif // ZIVOTINJE_HPP_INCLUDED

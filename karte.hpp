@@ -23,6 +23,10 @@ public:
         k=karta;
         brojKarata++;
     }
+    ~Karte()
+    {
+        brojKarata--;
+    }
     static int getBroj()
     {
         return brojKarata;
