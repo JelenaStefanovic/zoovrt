@@ -42,6 +42,7 @@
 		<Unit filename="hrana.hpp" />
 		<Unit filename="karte.hpp" />
 		<Unit filename="kengur.hpp" />
+		<Unit filename="kontinent.hpp" />
 		<Unit filename="lav.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="okean.hpp" />

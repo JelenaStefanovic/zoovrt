@@ -10,8 +10,8 @@ private:
     PokretL potez;
     string ime;
 public:
-    Lav():Zivotinje(lav, Afrika, 1),potez(rici),ime("ime") {}
-    Lav (Zivotinja v, Kontinenti p, bool k, PokretL po, string i) : Zivotinje(v,p,k),potez(po),ime(i) {}
+    Lav():Zivotinje(lav, Afrikaa, 1),potez(rici),ime("ime") {}
+    Lav (Zivotinja v, Kontinentii p, bool k, PokretL po, string i) : Zivotinje(v,p,k),potez(po),ime(i) {}
 };
 
 

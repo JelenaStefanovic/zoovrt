@@ -99,22 +99,22 @@ public:
                     cout<<"4. kengur"<<endl;
                     if (odg2==1)
                     {
-                        Animator a1("Pera", "Perić", obruc, delfin, okean, 0);
+                        Animator a1("Pera", "Perić", animatorr, obruc, delfin, okeann, 0);
                         cout<<"Vaš animator je Pera Perić"<<endl;
                     }
                     if (odg2==2)
                     {
-                        Animator a2("Nikola", "Nikolić", lopta, pingvin, Antartik, 1);
+                        Animator a2("Nikola", "Nikolić", animatorr, lopta, pingvin, Antartikk, 1);
                         cout<<"Vaš animator je Nikola Nikolić"<<endl;
                     }
                     if (odg2==3)
                     {
-                        Animator a3("Aleksa", "Aleksić", muzika, lav, Afrika, 1);
+                        Animator a3("Aleksa", "Aleksić", animatorr, muzika, lav, Afrikaa, 1);
                         cout<<"Vaš animator je Aleksa Aleksić"<<endl;
                     }
                     if (odg2==4)
                     {
-                        Animator a4("Lazar", "Lazarević", stap, kengur, Australija, 1);
+                        Animator a4("Lazar", "Lazarević", animatorr, stap, kengur, Australijaa, 1);
                         cout<<"Vaš animator je Lazar Lazarević"<<endl;
                     }
                     if (odg2>4)

@@ -4,7 +4,7 @@
 
 using namespace std;
 enum Zivotinja {pingvin, lav, lemur, delfin, zirafa, slon, kit, kengur};
-enum Kontinenti {Afrika, Azija, Australija, Antartik, okean};
+enum Kontinentii {Afrikaa, Azijaa, Australijaa, Antartikk, okeann};
 #include <fstream>
 void citajTxt(string nazivFajla)
 {
@@ -26,14 +26,14 @@ class Zivotinje
 {
 protected:
     Zivotinja vrsta;
-    Kontinenti poreklo;
+    Kontinentii poreklo;
     bool kopnena;
 public:
     Zivotinja getzi()const
     {
         return vrsta;
     }
-    Kontinenti getk()const
+    Kontinentii getk()const
     {
         return poreklo;
     }
@@ -44,10 +44,10 @@ public:
     Zivotinje()
     {
         vrsta=pingvin;
-        poreklo=Antartik;
+        poreklo=Antartikk;
         kopnena=1;
     }
-    Zivotinje(Zivotinja v, Kontinenti p, bool k)
+    Zivotinje(Zivotinja v, Kontinentii p, bool k)
     {
         vrsta=v;
         poreklo=p;

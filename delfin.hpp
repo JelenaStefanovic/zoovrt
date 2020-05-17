@@ -10,8 +10,8 @@ private:
     PokretD potez;
     string ime;
 public:
-    Delfin():Zivotinje(delfin, okean, 0),potez(izranjanje),ime("ime") {}
-    Delfin (Zivotinja v, Kontinenti p, bool k, PokretD po, string i) : Zivotinje(v,p,k),potez(po),ime(i) {}
+    Delfin():Zivotinje(delfin, okeann, 0),potez(izranjanje),ime("ime") {}
+    Delfin (Zivotinja v, Kontinentii p, bool k, PokretD po, string i) : Zivotinje(v,p,k),potez(po),ime(i) {}
 };
 
 #endif // DELFIN_HPP_INCLUDED

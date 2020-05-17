@@ -18,8 +18,8 @@ private:
     Lav laav;
     Kengur kenguur;
 public:
-    Predstave():anim("ime","prezime",obruc, pingvin, Antartik, 1),delf(delfin, okean, 0, izranjanje, "Dragan"), pingv(pingvin, Antartik,1,NaStomaku,"Kovalski"),laav(lav,Afrika, 1, rici, "Stefan"), kenguur(kengur, Australija,1,skoci,"Dusan"), vreme(osam_am) {}
-    Predstave(string i, string p, Stvari rek, Zivotinja v, Kontinenti po, bool k,  Zivotinja vD, Kontinenti pD, bool kD, PokretD poD, string iD,  Zivotinja vP, Kontinenti pP, bool kP, PokretP poP, string iP,  Zivotinja vL, Kontinenti pL, bool kL, PokretL poL, string iL,  Zivotinja vK, Kontinenti pK, bool kK, PokretK poK, string iK, Satnica vreme):anim(i,p,rek,v,po,k),delf(vD,pD,kD,poD,iD),pingv(vP,pP,kP,poP,iP),laav(vL,pL,kP,poL,iL),kenguur(vK,pK,kK,poK,iK) {}
+    Predstave():anim("ime","prezime", animatorr,obruc, pingvin, Antartikk, 1),delf(delfin, okeann, 0, izranjanje, "Dragan"), pingv(pingvin, Antartikk,1,NaStomaku,"Kovalski"),laav(lav,Afrikaa, 1, rici, "Stefan"), kenguur(kengur, Australijaa,1,skoci,"Dusan"), vreme(osam_am) {}
+    Predstave(string i, string p, Vrsta vr, Stvari rek, Zivotinja v, Kontinentii po, bool k,  Zivotinja vD, Kontinentii pD, bool kD, PokretD poD, string iD,  Zivotinja vP, Kontinentii pP, bool kP, PokretP poP, string iP,  Zivotinja vL, Kontinentii pL, bool kL, PokretL poL, string iL,  Zivotinja vK, Kontinentii pK, bool kK, PokretK poK, string iK, Satnica vreme):anim(i,p,vr, rek,v,po,k),delf(vD,pD,kD,poD,iD),pingv(vP,pP,kP,poP,iP),laav(vL,pL,kP,poL,iL),kenguur(vK,pK,kK,poK,iK) {}
 };
 
 

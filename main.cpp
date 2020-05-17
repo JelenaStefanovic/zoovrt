@@ -198,9 +198,14 @@ int main()
     zivotinju,animatora, termin, na kraju broj karata i ispise mu se konacna cena.
     2. Dodavanje zivotinja u zoo vrt
     */
-    Zivotinje z1(pingvin, Antartik, 1);
+    Zoovrt zoo;
+    Zaposleni zap1 ("Stefan","Stefanovic", cistac);
+    Zaposleni zap2 ("Ivana","Ivanovic", prodavac_karata);
+    Zaposleni zap3 ("Marija","Maric",hranitelj);
+    Animator an2("Danijel","Danilovic", animatorr, obruc, lav, Afrikaa, 1);
+    Zivotinje z1(pingvin, Antartikk, 1);
     z1.citajFajl("Spisak.txt");
-    Animator an1("Aleksa", "Aleksić", muzika, lav, Afrika, 1);
+    Animator an1("Aleksa", "Aleksić", animatorr, muzika, lav, Afrikaa, 1);
     cout << an1 << endl;
     Hrana h1(200, srednja, burger);
     cout << h1 << endl;
@@ -211,5 +216,40 @@ int main()
     cout << "Ispis karata: " << endl;
     cout << k1.getBr() << endl;
     cout << "Broj prodatih karata: " << Karte::getBroj() << endl;
+    zoo.ispis();
+    zoo.UnosUVektor(zap1);
+    zoo.UnosUVektor(zap2);
+    zoo.UnosUVektor(zap3);
+    zoo.UnosUVektor(an2);
+    zoo.ispis();
+    if (zoo.izbaci(zap2)==true)
+    cout << "Izbacili ste zaposlenog: " << zap2 <<endl;
+    else
+        cout<< "Neuspesno izbacen zaposleni" << endl;
+    zoo.ispis();
+    if (zoo.Pretraga(zap1)==true)
+    cout << "Uspesno pronadjen zaposleni: " << zap1 << endl;
+    else
+        cout << "neuspesno pronadjen zaposleni" << endl;
+
+    Kontinenti* kontinenti[20];
+    Afrika af;
+    Antartik an;
+    Australija au;
+    Azija az;
+    Okean ok;
+    kontinenti[0]=&af;
+    kontinenti[1]=&an;
+    kontinenti[2]=&au;
+    kontinenti[3]=&az;
+    kontinenti[4]=&ok;
+    cout<<"Ispis kontinenata: "<<endl;
+    for (int i=0; i<=4; i++){
+        kontinenti[i]->Ispisi();
+    }
+
+
     return 0;
+
+
 }
