@@ -1,15 +1,17 @@
 #ifndef ZIVOTINJE_HPP_INCLUDED
 #define ZIVOTINJE_HPP_INCLUDED
 #include <iostream>
+#include <vector>;
+#include "windows.h"
 
 using namespace std;
 enum Zivotinja {pingvin, lav, lemur, delfin, zirafa, slon, kit, kengur};
 enum Kontinentii {Afrikaa, Azijaa, Australijaa, Antartikk, okeann};
 #include <fstream>
-void citajTxt(string nazivFajla)
+void citajTxt(string SpisakZivotinja)
 {
     string linija;
-    ifstream fajl (nazivFajla);
+    ifstream fajl (SpisakZivotinja);
     if (fajl.is_open())
     {
         while ( getline (fajl,linija) )
@@ -28,7 +30,9 @@ protected:
     Zivotinja vrsta;
     Kontinentii poreklo;
     bool kopnena;
+    vector <Zivotinje*> vrstaz;
 public:
+
     Zivotinja getzi()const
     {
         return vrsta;
@@ -53,13 +57,31 @@ public:
         poreklo=p;
         kopnena=k;
     }
-    void citajFajl(string nazivFajla)
+    void SpisakZivotinja(string SpisakZivotinja)
     {
         cout<<"Spisak zjivotnja: "<<endl;
-        citajTxt(nazivFajla);
+        cout << endl;
+        citajTxt(SpisakZivotinja);
         cout<<endl<<endl;
     }
     friend ostream& operator << (ostream& izlaz, const Zivotinje& z);
+
+    void TraziZivotinju(const Zivotinje& zi)
+    {
+        while(1)
+        {
+            cout << "Pretraga za: ";
+            string vrstaZiv;
+            cin >> vrstaZiv;
+            cout << "Pronadjene zivotinje: " << endl;
+            for(auto it=vrstaz.begin(); it!=vrstaz.end(); it++)
+            {
+                //if((*it->getzi())==vrstaZiv)
+                    cout<<**it;
+            }
+                break;
+        }
+    }
 };
 
 #endif // ZIVOTINJE_HPP_INCLUDED

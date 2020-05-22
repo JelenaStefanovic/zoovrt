@@ -1,6 +1,7 @@
 #ifndef KARTE_HPP_INCLUDED
 #define KARTE_HPP_INCLUDED
 #include "animator.hpp"
+#include "korisnici.hpp"
 
 enum Ulaznica {jednodnevna, poludnevna, predstava};
 
@@ -41,99 +42,222 @@ public:
     }
     Ulaznica getk()const
     {
-        return karta;
+        return karta;https://ww2.123movies.la/serie/over-the-garden-wall-kzgkx7y/s1/watching.html
     }
 
     friend ostream& operator << (ostream& izlaz, const Karte& k);*/
 
     void Prodaja()
     {
-        int odgovor1;
-        cout<<"Izaberite vrstu karte koju želite: "<<endl;
-        cout<<"1. jednodnevna - 2000 din." <<endl;
-        cout<<"2. poludnevna - 1300 din."<<endl;
-        cin>>odgovor1;
-        if (odgovor1==1 || odgovor1==2)
+        Korisnici korP;
+        korP.Posetilac();
+        cout << "*****************************************" << endl;
+        cout <<"Izaberite vrstu karte koju zelite: "<< endl;
+        cout <<"1. jednodnevna - 2000 din." << endl;
+        cout <<"2. poludnevna - 1300 din."<< endl;
+        cout << "*****************************************" << endl;
+        int pom1;
+        int pom2;
+        int pom3;
+        int pom4;
+        int ziv;
+        int termin;
+        int jpk;
+        int brojK;
+        int br;
+        do
         {
-            if (odgovor1==1)
+            cin >> jpk;
+            cout << "*****************************************" << endl;
+            if (jpk==1)
             {
                 cena=2000;
-                cout<<"Vaša cena za sada je: "<<cena<<endl;
+                cout <<"Vasa cena za sada je: " << cena << endl;
+                cout << "*****************************************" << endl;
+                pom1=1;
             }
-            if (odgovor1==2)
+            else if (jpk==2)
             {
                 cena=1300;
-                cout<<"Vaša cena za sada je: "<<cena<<endl;
+                cout << "Vasa cena za sada je: " << cena << endl;
+                cout << "*****************************************" << endl;
+                pom1=1;
             }
-            int odgovor2;
-            cout<<"Da li želite da gledate predstavu?"<<endl;
-            cout<<"1. Ne"<<endl;
-            cout<<"2. Da"<<endl;
-            cin>>odgovor2;
-            if (odgovor2==1)
+            else if (jpk>2)
             {
-                int broj;
-                cout<<"Unesite broj karata"<<endl;
-                cin>>broj;
-                cena=cena*broj;
-                cout<<"Vaš iznos je: "<<cena<<endl;
+                pom1=0;
+                cout << "*****************************************" << endl;
+                cout << "!!!  Broj koji ste uneli ne odgovara ponudjenim opcijama  !!!" << endl;
+                cout << "*****************************************" << endl;
+                continue;
             }
-            if (odgovor2==2)
+        }
+        while (pom1==0);
+
+        int predst;
+        cout << "Da li zelite da gledate predstavu?" << endl;
+        cout << "1. Ne" << endl;
+        cout << "2. Da (cena predstave je 1000 din) " << endl;
+        cout << "*****************************************" << endl;
+        do
+        {
+            cin >> predst;
+            if (predst==1)
             {
+                cout <<"Unesite broj karata"<<endl;
+                cout << "*****************************************" << endl;
+                cin >> brojK;
+                cena=cena*brojK;
+                cout << "Vas iznos je: " << cena << endl;
+                cout << "*****************************************" << endl;
+                pom3=1;
+            }
+            if (predst==2)
+            {
+                pom3=1;
                 cena=cena+1000;
-                int odg1;
-                cout<<"Izaberite termin: "<<endl;
-                cout<<"1. 08:00"<<endl;
-                cout<<"2. 10:00"<<endl;
-                cout<<"3. 12:00"<<endl;
-                cout<<"4. 17:00"<<endl;
-                cout<<"5. 20:00"<<endl;
-                cin>>odg1;
-                if(odg1>0 && odg1<6)
+                cout << "*****************************************" << endl;
+                cout << "Izaberite termin: "<< endl;
+                cout << "1. 08:00"<< endl;
+                cout << "2. 10:00"<< endl;
+                cout << "3. 12:00"<< endl;
+                cout << "4. 17:00"<< endl;
+                cout << "5. 20:00"<< endl;
+                cout << "*****************************************" << endl;
+                cin>>termin;
+                cout << "*****************************************" << endl;
+                do
                 {
-                    int odg2;
-                    cout<<"Izaberite koju životinju želite da vidite: "<<endl;
+                    if (termin==1)
+                    {
+                        cout<<"Izabrali ste predstavu u 08:00"<<endl;
+                        cout << "*****************************************" << endl;
+                        pom4=1;
+                    }
+                    else if (termin==2)
+                    {
+                        cout<<"Izabrali ste predstavu u 10:00"<<endl;
+                        cout << "*****************************************" << endl;
+                        pom4=1;
+                    }
+                    else if (termin==3)
+                    {
+                        cout<<"Izabrali ste predstavu u 12:00"<<endl;
+                        cout << "*****************************************" << endl;
+                        pom4=1;
+                    }
+                    else if (termin==4)
+                    {
+                        cout<<"Izabrali ste predstavu u 17:00"<<endl;
+                        cout << "*****************************************" << endl;
+                        pom4=1;
+                    }
+                    else if (termin==5)
+                    {
+                        cout<<"Izabrali ste predstavu u 20:00"<<endl;
+                        cout << "*****************************************" << endl;
+                        pom4=1;
+                    }
+                    else if(termin>5)
+                    {
+                        pom4=0;
+                        cout << "*****************************************" << endl;
+                        cout << "!!!  Broj koji ste uneli ne odgovara ponudjenim opcijama  !!!" << endl;
+                        cout << "*****************************************" << endl;
+                        continue;
+                    }
+                }
+                while (pom4==0);
+                do
+                {
+
+                    cout << endl;
+                    cout<<"Izaberite koju zivotinju zelite da vidite: "<<endl;
                     cout<<"1. delfin"<<endl;
                     cout<<"2. pingvin"<<endl;
                     cout<<"3. lav"<<endl;
                     cout<<"4. kengur"<<endl;
-                    if (odg2==1)
+                    cout << "*****************************************" << endl;
+                    cin>>ziv;
+                    cout << "*****************************************" << endl;
+                    if (ziv==1)
                     {
-                        Animator a1("Pera", "Perić", animatorr, obruc, delfin, okeann, 0);
-                        cout<<"Vaš animator je Pera Perić"<<endl;
+                        Animator a1("Pera", "Peric", animatorr, obruc, delfin, okeann, 0);
+                        cout<<"Izabrali ste delfina, Vas animator je Pera Peric" <<endl;
+                        cout << "*****************************************" << endl;
+                        cout<<"Unesite broj karata"<<endl;
+                        cout << "*****************************************" << endl;
+                        cin>>br;
+                        cena=cena*br;
+                        cout << "*****************************************" << endl;
+                        cout<<"Vas iznos je: "<<cena<<endl;
+                        cout << "*****************************************" << endl;
+                        pom2=1;
                     }
-                    if (odg2==2)
+                    if (ziv==2)
                     {
                         Animator a2("Nikola", "Nikolić", animatorr, lopta, pingvin, Antartikk, 1);
-                        cout<<"Vaš animator je Nikola Nikolić"<<endl;
+                        cout<<"Izabrali ste pingvina, Vas animator je Nikola Nikolic"<<endl;
+                        cout << "*****************************************" << endl;
+                        cout<<"Unesite broj karata"<<endl;
+                        cout << "*****************************************" << endl;
+                        cin>>br;
+                        cena=cena*br;
+                        cout << "*****************************************" << endl;
+                        cout<<"Vas iznos je: "<<cena<<endl;
+                        cout << "*****************************************" << endl;
+                        pom2=1;
                     }
-                    if (odg2==3)
+                    if (ziv==3)
                     {
                         Animator a3("Aleksa", "Aleksić", animatorr, muzika, lav, Afrikaa, 1);
-                        cout<<"Vaš animator je Aleksa Aleksić"<<endl;
+                        cout<<"Izabrali ste lava, Vas animator je Aleksa Aleksic"<<endl;
+                        cout << "*****************************************" << endl;
+                        cout<<"Unesite broj karata"<<endl;
+                        cout << "*****************************************" << endl;
+                        cin>>br;
+                        cena=cena*br;
+                        cout << "*****************************************" << endl;
+                        cout<<"Vas iznos je: "<<cena<<endl;
+                        cout << "*****************************************" << endl;
+                        pom2=1;
                     }
-                    if (odg2==4)
+                    if (ziv==4)
                     {
                         Animator a4("Lazar", "Lazarević", animatorr, stap, kengur, Australijaa, 1);
-                        cout<<"Vaš animator je Lazar Lazarević"<<endl;
+                        cout<<"Izabrali ste kengura, Vas animator je Lazar Lazarevic"<<endl;
+                        cout << "*****************************************" << endl;
+                        cout<<"Unesite broj karata"<<endl;
+                        cout << "*****************************************" << endl;
+                        cin>>br;
+                        cena=cena*br;
+                        cout << "*****************************************" << endl;
+                        cout<<"Vas iznos je: "<<cena<<endl;
+                        cout << "*****************************************" << endl;
+                        pom2=1;
                     }
-                    if (odg2>4)
+                    if (ziv>4)
                     {
-                        cout<<"Uneli ste pogrešan broj"<<endl;
+                        pom2=0;
+                        cout << "*****************************************" << endl;
+                        cout << "!!!  Broj koji ste uneli ne odgovara ponudjenim opcijama  !!!" << endl;
+                        cout << "*****************************************" << endl;
+                        continue;
                     }
                 }
-                int br;
-                cout<<"Unesite broj karata"<<endl;
-                cin>>br;
-                cena=cena*br;
-                cout<<"Vaš iznos je: "<<cena<<endl;
+                while(pom2==0);
+            }
+            if (predst>2)
+            {
+                pom3=0;
+                cout << "*****************************************" << endl;
+                cout << "!!!  Broj koji ste uneli ne odgovara ponudjenim opcijama  !!!" << endl;
+                cout << "*****************************************" << endl;
+                continue;
+
             }
         }
-        else
-        {
-            cout<<"Izabrali ste nepostojeću opciju"<<endl;
-        }
-
+        while (pom3==0);
     }
 
 };

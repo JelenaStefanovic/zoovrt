@@ -16,17 +16,101 @@
 #include "zaposleni.hpp"
 #include "zivotinje.hpp"
 #include "zoovrt.hpp"
+#include "korisnici.hpp"
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <fstream>
+#include <cstdlib>
+#include <vector>
 
 using namespace std;
 
+void Pocetak()
+{
+    int b, x, loz, y;
+    do
+    {
+
+        cout << "Unesite broj: " << endl;
+        cout << "1. Kupovanje karata (posetilac)" << endl;
+        cout << "2. Dodavanje zivotinja (zaposleni)" << endl;
+
+        cin >> b;
+        if (b==1)
+        {
+            cout << "*****************************************" << endl;
+            cout << "Kupovina karata: " << endl;
+            Karte k(1000, jednodnevna);
+            k.Prodaja();
+            x=1;
+        }
+        else if (b==2)
+        {
+            do
+            {
+                cout << "*****************************************" << endl;
+                cout << "Da li znate lozinku?" << endl;
+                cout << "1. Da" << endl;
+                cout << "2. Ne" << endl;
+                cin >> loz;
+                if (loz==1)
+                {
+                    Korisnici kor;
+                    kor.Zaposleni();
+                    y=1;
+                    x=1;
+                }
+                else if (loz==2)
+                {
+                    cout << "*****************************************" << endl;
+                    cout << "Povratak na prvo unosenje broja..." << endl;
+                    y=0;
+                    x=0;
+                    break;
+                }
+                else if (loz>2)
+                {
+                    y=0;
+                    cout << "*****************************************" << endl;
+                    cout << "!!!  Broj koji ste uneli ne odgovara ponudjenim opcijama  !!!" << endl;
+                    cout << "*****************************************" << endl;
+                    continue;
+                }
+            }
+            while(y==0);
+
+        }
+        else if (b>2)
+        {
+            x=0;
+            cout << "*****************************************" << endl;
+            cout << "!!!  Broj koji ste uneli ne odgovara ponudjenim opcijama  !!!" << endl;
+            cout << "*****************************************" << endl;
+            continue;
+        }
+    }
+    while(x==0);
+}
+
 int Karte::brojKarata=0;
+
+/*ostream& operator << (ostream& izlaz, const Korisnici& kor)
+{
+    izlaz << "Unesite vase ime: " << endl;
+    cin >> kor.ime;
+    izlaz << "Unesite vase prezime: " << endl;
+    cin >> kor.prezime;
+    izlaz << "Dobrodosli u nas zooloski vrt " << kor.getIk() << " " << kor.getPk() << endl;
+    return izlaz;
+}*/
 
 ostream& operator <<(ostream& izlaz, const Zivotinje& z)
 {
 
     if (z.getb()==1)
     {
-       izlaz << "Kopnena"<< endl;
+        izlaz << "Kopnena"<< endl;
     }
     else
     {
@@ -190,7 +274,7 @@ ostream& operator << (ostream& izlaz, const Suvenirnica& s)
 
 int main()
 {
-    /*~
+    /*
     Moja ideje za funkcionalnost projekta su sledece:
     1. Prodaja karata odnosno ulaznica:
     Korisnik izabere da li zeli poludnevnu celodnevnu ili kartu za predstavu,
@@ -198,13 +282,16 @@ int main()
     zivotinju,animatora, termin, na kraju broj karata i ispise mu se konacna cena.
     2. Dodavanje zivotinja u zoo vrt
     */
+    cout << "*****************************************" << endl;
+    cout << "Zadaci sa proslih rokova" << endl;
+    cout << "*****************************************" << endl;
     Zoovrt zoo;
     Zaposleni zap1 ("Stefan","Stefanovic", cistac);
     Zaposleni zap2 ("Ivana","Ivanovic", prodavac_karata);
     Zaposleni zap3 ("Marija","Maric",hranitelj);
     Animator an2("Danijel","Danilovic", animatorr, obruc, lav, Afrikaa, 1);
     Zivotinje z1(pingvin, Antartikk, 1);
-    z1.citajFajl("Spisak.txt");
+    z1.SpisakZivotinja("SpisakZivotinja.txt");
     Animator an1("Aleksa", "Aleksić", animatorr, muzika, lav, Afrikaa, 1);
     cout << an1 << endl;
     Hrana h1(200, srednja, burger);
@@ -223,12 +310,12 @@ int main()
     zoo.UnosUVektor(an2);
     zoo.ispis();
     if (zoo.izbaci(zap2)==true)
-    cout << "Izbacili ste zaposlenog: " << zap2 <<endl;
+        cout << "Izbacili ste zaposlenog: " << zap2 <<endl;
     else
         cout<< "Neuspesno izbacen zaposleni" << endl;
     zoo.ispis();
     if (zoo.Pretraga(zap1)==true)
-    cout << "Uspesno pronadjen zaposleni: " << zap1 << endl;
+        cout << "Uspesno pronadjen zaposleni: " << zap1 << endl;
     else
         cout << "neuspesno pronadjen zaposleni" << endl;
 
@@ -244,9 +331,14 @@ int main()
     kontinenti[3]=&az;
     kontinenti[4]=&ok;
     cout<<"Ispis kontinenata: "<<endl;
-    for (int i=0; i<=4; i++){
+    for (int i=0; i<=4; i++)
+    {
         kontinenti[i]->Ispisi();
     }
+    cout << "*****************************************" << endl;
+
+    Pocetak();
+
 
 
     return 0;

@@ -27,24 +27,31 @@ public:
             cout<<*it<<endl;
             }
     }
-    bool izbaci(const Zaposleni& z){
-        for (auto it=zaposleni.begin(); it<zaposleni.end(); it++){
-            if (z.getI()==(it)->getI() && z.getPr()==(it)->getPr()){
-                zaposleni.erase(it);
-                return true;
+    bool izbaci(const Zaposleni& z)
+    {
+        for (auto it=zaposleni.begin(); it<zaposleni.end(); it++)
+            {
+            if (z.getI()==(it)->getI() && z.getPr()==(it)->getPr())
+                {
+                    zaposleni.erase(it);
+                    return true;
+                }
             }
-        }
         return false;
 
     }
-    bool Pretraga(const Zaposleni& z){
-        for(auto it=zaposleni.begin(); it<zaposleni.end(); it++){
-        if(z.getI()==(it)->getI() && z.getPr()==(it)->getPr()){
-            return true;
-        }
+    bool Pretraga(const Zaposleni& z)
+    {
+        for(auto it=zaposleni.begin(); it<zaposleni.end(); it++)
+        {
+        if(z.getI()==(it)->getI() && z.getPr()==(it)->getPr())
+            {
+                return true;
+            }
         return false;
     }
     }
+
 };
 
 #endif // ZOOVRT_HPP_INCLUDED

@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Spisak.txt" />
+		<Unit filename="SpisakZivotinja.txt" />
 		<Unit filename="afrika.hpp" />
 		<Unit filename="animator.hpp" />
 		<Unit filename="antartik.hpp" />
@@ -43,6 +44,7 @@
 		<Unit filename="karte.hpp" />
 		<Unit filename="kengur.hpp" />
 		<Unit filename="kontinent.hpp" />
+		<Unit filename="korisnici.hpp" />
 		<Unit filename="lav.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="okean.hpp" />
