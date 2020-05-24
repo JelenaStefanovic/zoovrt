@@ -28,7 +28,9 @@ using namespace std;
 
 void Pocetak()
 {
-    int b, x, loz, y;
+    int b, x, loz, y, un, z;
+    Zoovrt zv;
+    Zivotinje zivotinja1(lav, Antartikk, 1);
     do
     {
 
@@ -60,6 +62,23 @@ void Pocetak()
                     kor.Zaposleni();
                     y=1;
                     x=1;
+                    cout << "Pritisnite jedan (1) da dodate zivotinju" << endl;
+                    cin >> un;
+                    if (un == 1)
+                    {
+                        cout << "Trenutni spisak zivotinja: " << endl;
+                        zv.SpisakZivotinjaZ("SpisakZivotinja.txt");
+                        cout << "Spisak sa dodatom zivotinjom: " << endl;
+                        zivotinja1.pisiTxt("SpisakZivotinja.txt", "Lav Afrika kopnena", 'a');
+                        zv.SpisakZivotinjaZ("SpisakZivotinja.txt");
+                    }
+                    else if (un > 1)
+                    {
+                        cout << "*****************************************" << endl;
+                        cout << "!!!  Broj koji ste uneli ne odgovara ponudjenim opcijama  !!!" << endl;
+                        cout << "*****************************************" << endl;
+                    }
+
                 }
                 else if (loz==2)
                 {
@@ -94,16 +113,6 @@ void Pocetak()
 }
 
 int Karte::brojKarata=0;
-
-/*ostream& operator << (ostream& izlaz, const Korisnici& kor)
-{
-    izlaz << "Unesite vase ime: " << endl;
-    cin >> kor.ime;
-    izlaz << "Unesite vase prezime: " << endl;
-    cin >> kor.prezime;
-    izlaz << "Dobrodosli u nas zooloski vrt " << kor.getIk() << " " << kor.getPk() << endl;
-    return izlaz;
-}*/
 
 ostream& operator <<(ostream& izlaz, const Zivotinje& z)
 {
