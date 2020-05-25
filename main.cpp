@@ -30,7 +30,9 @@ void Pocetak()
 {
     int b, x, loz, y, un, z;
     Zoovrt zv;
-    Zivotinje zivotinja1(lav, Antartikk, 1);
+    Zivotinje zivotinjaa1(lav, Antartikk, true);
+    Zivotinje zivotinjaa2(slon, Azijaa, true);
+    Zivotinje zivotinjaa3(kit,okeann,false);
     do
     {
 
@@ -69,8 +71,15 @@ void Pocetak()
                         cout << "Trenutni spisak zivotinja: " << endl;
                         zv.SpisakZivotinjaZ("SpisakZivotinja.txt");
                         cout << "Spisak sa dodatom zivotinjom: " << endl;
-                        zivotinja1.pisiTxt("SpisakZivotinja.txt", "Lav Afrika kopnena", 'a');
+                        zivotinjaa1.pisiTxt("SpisakZivotinja.txt", "Lav Afrika kopnena", 'a');
                         zv.SpisakZivotinjaZ("SpisakZivotinja.txt");
+                        zv.UnosUVektorZ(zivotinjaa1);
+                        zv.UnosUVektorZ(zivotinjaa2);
+                        zv.UnosUVektorZ(zivotinjaa3);
+                        cout << endl;
+                        zv.ispisZ();
+
+
                     }
                     else if (un > 1)
                     {
